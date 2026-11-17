@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <title>First &amp; Last</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand-logo" href="/" aria-label="My First &amp; Last photobooth home"><img src="assets/my-first-and-last-logo.png" alt="My First and Last"></a>
+  </header>
+
+  <main class="booth">
+    <section class="camera-side" aria-label="Photobooth camera">
+      <div class="camera-frame" id="cameraFrame">
+        <video id="video" autoplay playsinline muted></video>
+        <div class="camera-idle" id="cameraIdle">
+          <div class="camera-icon" aria-hidden="true"><span></span></div>
+          <p>Your camera goes here</p>
+        </div>
+        <div class="countdown" id="countdown" aria-live="polite"></div>
+        <div class="camera-corner corner-tl"></div><div class="camera-corner corner-tr"></div>
+        <div class="camera-corner corner-bl"></div><div class="camera-corner corner-br"></div>
+        <span class="live-pill" id="livePill"><i></i> LIVE</span>
+      </div>
+      <div class="camera-controls">
+        <div class="shot-progress" aria-label="Photo progress"><span></span><span></span><span></span></div>
+        <p class="prompt" id="prompt">Snap and celebrate with the grooms!</p>
+        <button class="shutter" id="shutter"><span class="shutter-dot"></span><span id="shutterText">Start camera</span></button>
+        <button class="reset-button" id="resetButton" hidden>Take another strip <span>↻</span></button>
+        <p class="error" id="error" role="status"></p>
+      </div>
+    </section>
+
+    <section class="print-side" aria-label="Your photo strip">
+      <div class="print-heading"><span>Your strip</span><span class="print-size">3 frames · one keepsake</span></div>
+      <div class="strip-wrap"><canvas id="strip" width="600" height="1500" aria-label="Your photo strip preview"></canvas></div>
+      <a class="download" id="download" download="my-first-and-last-strip.png" hidden>Download strip <span>↓</span></a>
+    </section>
+  </main>
+
+  <section class="link-out" aria-label="Featured link">
+    <a href="https://readymag.website/u2900847046/6607416/" aria-label="Open the featured page">
+      <img src="assets/readymag-flower.png" alt="Open featured page">
+    </a>
+    <p class="link-caption">My First and Last CSE</p>
+  </section>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
